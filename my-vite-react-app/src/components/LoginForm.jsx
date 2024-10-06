@@ -13,7 +13,7 @@ const LoginForm = ({setIsLoggedIn}) => {
         {
             ...prevData,
             [event.target.name]:event.target.value 
-        }
+        } 
        ))
     } 
     function submitHandler(event) {

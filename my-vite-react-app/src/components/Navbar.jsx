@@ -7,7 +7,7 @@ const Navbar = (props) => {
     let isLoggedIn=props.isLoggedIn;
     let setIsLoggedIn=props.setIsLoggedIn;
   return (
-   <div className='flex justify-evenly'>
+   <div className='w-full fixed bg-black text-white  p-3 flex justify-evenly'>
     <Link to="/">
        <img src={logo} alt="logo" width={160} height={32} loading="lazy" />
     </Link>
@@ -18,10 +18,10 @@ const Navbar = (props) => {
                 <Link to="/">Home</Link>
             </li>
             <li>
-                <Link to="/">About</Link>
+                <Link to="/about">About</Link>
             </li>
             <li>
-                <Link to="/">Contact</Link>
+                <Link to="/contact">Contact</Link>
             </li>
         </ul>
     </nav>

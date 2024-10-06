@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 import { AiOutlineEye } from "react-icons/ai";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
-const LoginForm = () => {
+const LoginForm = ({setIsLoggedIn}) => {
     const [formData,setFormData]=useState({
         email:"",password:""})
 
@@ -13,17 +13,17 @@ const LoginForm = () => {
         {
             ...prevData,
             [event.target.name]:event.target.value 
-        }
+        } 
        ))
     } 
-    // function submitHandler(event) {
-    //     event.preventDefault();
-    //     setisLoggedIn(true);
-    //     // toast.success("Logged In");
-    //     console.log("Printing the formData ");
-    //     console.log(formData)
-    //     // navigate("/dashboard");
-    // }
+    function submitHandler(event) {
+        event.preventDefault();
+        setIsLoggedIn(true);
+        // toast.success("Logged In");
+        console.log("Printing the formData ");
+        console.log(formData)
+        // navigate("/dashboard");
+    }
   return (
     
 <form onSubmit={submitHandler}>
